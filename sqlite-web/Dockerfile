@@ -12,11 +12,11 @@ COPY requirements.txt /tmp/
 # hadolint ignore=DL3042
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    py3-pip=22.3.1-r1 \
+    py3-pip=22.3.1-r1 \ 
   \
   && apk add --no-cache \
     nginx=1.22.1-r0 \
-    python3=3.10.9-r1 \
+    python3=3.10.10-r0 \
   \
   && pip3 install -r /tmp/requirements.txt \
   \
@@ -49,11 +49,11 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
+    maintainer="Anonymoesje <50021531+Anonymoesje@users.noreply.github.com>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.vendor="Anonymoesje SQLiteWeb" \
+    org.opencontainers.image.authors="Anonymoesje <50021531+Anonymoesje@users.noreply.github.com>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://addons.community" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
